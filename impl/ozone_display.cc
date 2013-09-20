@@ -189,7 +189,7 @@ void OzoneDisplay::WillDestroyCurrentMessageLoop()
 }
 
 void OzoneDisplay::SetWidgetState(gfx::AcceleratedWidget w,
-                                  WidgetState state)
+                                  int state)
 {
   // TODO(Kalyan): Map w to window.
   if (host_)
@@ -199,7 +199,7 @@ void OzoneDisplay::SetWidgetState(gfx::AcceleratedWidget w,
 }
 
 void OzoneDisplay::OnWidgetStateChanged(gfx::AcceleratedWidget w,
-                                       WidgetState state)
+                                        int state)
 {
   // TODO(Kalyan): Map w to window.
   switch (state) {

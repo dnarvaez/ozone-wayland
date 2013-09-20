@@ -34,8 +34,6 @@ class OzoneDisplay : public ui::SurfaceFactoryOzone,
     InActive = 8 // Widget is DeActivated.
   };
 
-  typedef unsigned WidgetState;
-
   static OzoneDisplay* GetInstance();
 
   OzoneDisplay();
@@ -64,8 +62,8 @@ class OzoneDisplay : public ui::SurfaceFactoryOzone,
   // MessageLoop::DestructionObserver overrides.
   virtual void WillDestroyCurrentMessageLoop() OVERRIDE;
 
-  void SetWidgetState(gfx::AcceleratedWidget w, WidgetState state);
-  void OnWidgetStateChanged(gfx::AcceleratedWidget w, WidgetState state);
+  void SetWidgetState(gfx::AcceleratedWidget w, int state);
+  void OnWidgetStateChanged(gfx::AcceleratedWidget w, int state);
 
  private:
   enum Launch {

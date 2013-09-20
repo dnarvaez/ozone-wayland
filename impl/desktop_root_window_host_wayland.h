@@ -55,7 +55,6 @@ class VIEWS_EXPORT DesktopRootWindowHostWayland :
     Active = 0x20, // Window is Active.
   };
 
-  typedef unsigned RootWindowState;
   // Initializes our Ozone surface to draw on. This method performs all
   // initialization related to talking to the Ozone server.
   void InitWaylandWindow(const views::Widget::InitParams& params);
@@ -180,7 +179,7 @@ class VIEWS_EXPORT DesktopRootWindowHostWayland :
   gfx::AcceleratedWidget window_;
   views::internal::NativeWidgetDelegate* native_widget_delegate_;
 
-  RootWindowState state_;
+  int state_;
 
   gfx::Rect bounds_;
 
